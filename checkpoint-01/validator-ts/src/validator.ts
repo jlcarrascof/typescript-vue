@@ -1,7 +1,5 @@
 function validateString(value: unknown): boolean {
-    if (typeof value === 'string') 
-        return true;
-    return false;
+    return typeof value === 'string';
 }
 
 function processError(value: unknown): string {
