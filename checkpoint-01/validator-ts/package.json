@@ -1,0 +1,15 @@
+{
+  "name": "validator-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc src/test.ts && node src/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
