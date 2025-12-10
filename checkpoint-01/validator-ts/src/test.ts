@@ -10,3 +10,7 @@ try {
 } catch (error) {
     console.error('Error captured:', (error as Error).message);
 }
+
+console.log(validator.detectType("test")); // "string"
+console.log(validator.detectType(42)); // "number"
+console.log(validator.detectType(true)); // "another"
