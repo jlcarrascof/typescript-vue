@@ -5,9 +5,12 @@ function validateString(value: unknown): boolean {
 function processError(value: unknown): string {
     if (typeof value === 'string') {
         return value.toUpperCase();
-    } else {
-        throw new Error('Value is not a string');
     }
+    throwError('Value is not a string'); //  Auxiliary function to throw an error with never return type
+}
+
+function throwError(message: string): never {
+    throw new Error(message);
 }
 
 function detectType(value: any): 'string' | 'number' | 'another' { 
