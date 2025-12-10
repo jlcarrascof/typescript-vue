@@ -2,17 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validator = void 0;
 function validateString(value) {
-    if (typeof value === 'string')
-        return true;
-    return false;
+    return typeof value === 'string';
 }
 function processError(value) {
     if (typeof value === 'string') {
         return value.toUpperCase();
     }
-    else {
-        throw new Error('Value is not a string');
-    }
+    throwError('Value is not a string'); //  Auxiliary function to throw an error with never return type
+}
+function throwError(message) {
+    throw new Error(message);
 }
 function detectType(value) {
     if (typeof value === 'string') {
