@@ -12,7 +12,7 @@ function processError(value: unknown): string {
     }
 }
 
-function detectType(value: any): string { 
+function detectType(value: any): 'string' | 'number' | 'another' { 
     if (typeof value === 'string') {
         return 'string';
     } else if (typeof value === 'number') {
